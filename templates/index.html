@@ -11,5 +11,16 @@
         {{ form.file.label }} {{ form.file() }}
         {{ form.submit() }}
     </form>
+
+    {% if labeled_image_url %}
+    <h2>Processed Image:</h2>
+    <img src="{{ labeled_image_url }}" alt="Processed Image" style="max-width: 100%; height: auto;">
+    {% endif %}
+
+    {% if groups %}
+    <h2>Detected Groups:</h2>
+    <pre>{{ groups | tojson(indent=2) }}</pre>
+    {% endif %}
+
 </body>
 </html>

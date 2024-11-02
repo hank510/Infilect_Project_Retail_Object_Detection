@@ -1,0 +1,8 @@
+pandas
+opencv-python
+numpy
+flask
+torchvision
+torch
+flask_wtf
+requests
